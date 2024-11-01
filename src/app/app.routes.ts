@@ -16,12 +16,17 @@ import {PowerliftingComponent} from "./nutrisend/components/powerlifting/powerli
 import {SportsComponent} from "./nutrisend/pages/sports/sports.component";
 import {ScheduleComponent} from "./nutrisend/components/schedule/schedule.component";
 import {NotificationsComponent} from "./nutrisend/components/notifications/notifications.component";
+import {FoodComponent} from "./nutrisend/pages/food/food.component";
+import {FoodFitComponent} from "./nutrisend/pages/food-fit/food-fit.component";
+import {OrderItemComponent} from "./nutrisend/components/order-item/order-item.component";
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'plans', component: PlansComponent },
   { path: 'order-premium', component: OrderTypeComponent },
   { path: 'order', component: OrderComponent },
+  { path: 'food', component: FoodComponent },
+  { path: 'food-fit', component: FoodFitComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'sign-up', component: SignUpComponent },
@@ -34,6 +39,7 @@ export const routes: Routes = [
   {path: 'swimming', component: SwimmingComponent},//Renzo
   {path: 'schedule', component: ScheduleComponent},//Renzo
   {path: 'notifications', component: NotificationsComponent},//Renzo
+  {path: 'order-item', component: OrderItemComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent}
 ];

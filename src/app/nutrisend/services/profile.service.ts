@@ -9,10 +9,13 @@ import { Observable } from 'rxjs';
 export class ProfileService extends BaseService<Profile> {
   constructor() {
     super();
-    this.resourceEndPoint = '/users-premium';
+    this.resourceEndPoint = '/users';
   }
   public getAllProfiles(): Observable<Profile[]> {
     return this.http.get<Profile[]>(this.resourcePath(), this.httpOptions);
   }
-}
 
+  public updateProfile(profile: Profile): Observable<Profile> {
+    return this.http.put<Profile>(`${this.resourcePath()}/${profile.id}`, profile, this.httpOptions);
+  }
+}

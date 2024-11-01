@@ -26,36 +26,9 @@ Permite a los usuarios planificar y pedir alimentos para la semana.`;
 
   constructor(private router: Router) { }
   onBasicPlanClick(){
-    this.router.navigate(['/order']);
+    this.router.navigate(['/food-fit']);
   }
   onPremiumPlanClick(){
     this.router.navigate(['/order-premium']);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
