@@ -59,34 +59,34 @@
 
 <!-- Carrito -->
 <div class="food-orders-container">
-  <mat-toolbar color="primary">
-    <span class="main-title">Food Orders</span>
-    <span class="spacer"></span>
-    <button mat-icon-button (click)="toggleCart()">
-      <mat-icon>shopping_cart</mat-icon>
-    </button>
-  </mat-toolbar>
-  <div *ngIf="showCart" class="cart">
-    <h2>Selected Items</h2>
+<mat-toolbar color="primary">
+  <span class="main-title">Food Orders</span>
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="toggleCart()">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+</mat-toolbar>
+<div *ngIf="showCart" class="cart">
+  <h2>Selected Items</h2>
 
-    <div *ngFor="let item of currentOrder.items">
-      <div *ngIf="item.category === 'Breakfast' && selectedBreakfast?.name === item.name">
-        <p>{{ item.name }} - Quantity: {{ item.quantity }}</p>
-        <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button>
-      </div>
-      <div *ngIf="item.category === 'Lunch' && selectedLunch?.name === item.name">
-        <p>{{ item.name }} - Quantity: {{ item.quantity }}</p>
-        <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button>
-      </div>
-      <div *ngIf="item.category === 'Dinner' && selectedDinner?.name === item.name">
-        <p>{{ item.name }} - Quantity: {{ item.quantity }}</p>
-        <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button>
-      </div>
+  <div *ngFor="let item of currentOrder.items">
+    <div *ngIf="item.category === 'Breakfast' && selectedBreakfast?.name === item.name">
+      <p>{{ item.name }} - Quantity: {{ item.quantity }}</p>
+      <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button>
     </div>
-
-    <button mat-button color="accent" [routerLink]="['/order-item']" (click)="saveOrder()">
-      <mat-icon>check_circle</mat-icon> Continue
-    </button>
-    <button mat-button (click)="showCart = false">Close Cart</button>
+    <div *ngIf="item.category === 'Lunch' && selectedLunch?.name === item.name">
+      <p>{{ item.name }} - Quantity: {{ item.quantity }}</p>
+      <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button>
+    </div>
+    <div *ngIf="item.category === 'Dinner' && selectedDinner?.name === item.name">
+      <p>{{ item.name }} - Quantity: {{ item.quantity }}</p>
+      <button mat-button color="warn" (click)="removeFromOrder(item)">Remove</button>
+    </div>
   </div>
+
+  <button mat-button color="accent" [routerLink]="['/order']" (click)="saveOrder()">
+    <mat-icon>check_circle</mat-icon> Continue
+  </button>
+  <button mat-button (click)="showCart = false">Close Cart</button>
+ </div>
 </div>

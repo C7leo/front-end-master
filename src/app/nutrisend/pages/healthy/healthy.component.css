@@ -1,20 +1,30 @@
+/* Estilos generales */
 h1 {
   text-align: center;
-  font-size: 50px;
-  margin: 50px auto;
+  font-size: 2.5rem;
+  margin: 20px 0;
+  color: #ff5722; /* Color vibrante */
 }
 
-div {
-  padding: 20px;
+.calorie-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-h2 {
-  margin-top: 40px;
-  margin-bottom: 10px;
-  font-size: 24px;
-  color: #333;
+#calorieInput {
+  margin-left: 10px;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f8f8f8;
 }
 
+
+
+/* Estilo para las tarjetas de comida */
 .meal-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -25,58 +35,107 @@ mat-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
-  padding: 15px;
-  max-width: 300px;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-
-mat-card img {
-  max-width: 100%;
-  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 mat-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-p {
-  margin: 5px 0;
-  font-size: 14px;
-  color: #666;
+mat-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: 180px;
+  object-fit: cover;
 }
 
-p:last-child {
+mat-card h3 {
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #000;
+  color: #333;
+  margin: 10px 0;
 }
 
-h3 {
-  font-size: 20px;
-  text-align: center;
-}
-
-#calorieInput {
-  margin-top: 20px;
-  padding: 8px;
-  width: 200px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+mat-card p {
   font-size: 1rem;
+  color: #777;
+  margin: 5px 0;
 }
 
-#calorieInput:focus {
-  outline: none;
-  border-color: #4caf50;
+
+p.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ff5722;
+  margin: 10px 0;
 }
 
-.calorie-search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  gap: 10px;
+button.mat-button {
+  background-color: #ff5722;
+  color: white;
+  font-weight: bold;
+  margin-top: auto;
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button.mat-button:hover {
+  background-color: #e64a19; /* Colores más oscuros en hover */
+}
+
+/* Estilo para los títulos de las categorías */
+h2 {
+  margin-top: 40px; /* Espacio arriba del título */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  font-size: 1.8rem;
+  color: #ff5722;
+  text-align: center; /* Centra el título */
+  padding-left: 20px; /* Añade espacio a la izquierda */
+  padding-right: 20px; /* Añade espacio a la derecha */
+}
+/* Estilos para el carrito */
+.cart-container {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffebee; /* Color de fondo claro */
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.cart-container mat-card {
+  margin-bottom: 15px;
+}
+
+.cart-container h3 {
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Botón de Checkout */
+button.mat-raised-button {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+button.mat-raised-button:hover {
+  background-color: #388e3c; /* Sombra más oscura al pasar el ratón */
+}
+
+.checkout-summary {
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Colocar en columna */
+  align-items: center; /* Centrar horizontalmente */
+  margin-top: 20px; /* Espacio superior */
 }

@@ -19,3 +19,4 @@ export class ProfileService extends BaseService<Profile> {
     return this.http.put<Profile>(`${this.resourcePath()}/${profile.id}`, profile, this.httpOptions);
   }
 }
+
