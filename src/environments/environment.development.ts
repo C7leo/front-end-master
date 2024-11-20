@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  serverBasePath: 'http://localhost:3000',
+  serverBasePath: 'https://graceful-respect-production.up.railway.app',
 };

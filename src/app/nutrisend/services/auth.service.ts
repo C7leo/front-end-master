@@ -10,7 +10,7 @@ import { catchError, Observable, tap } from "rxjs";
 export class AuthService extends BaseService<User> {
   constructor() {
     super();
-    this.resourceEndPoint = '/users';
+    this.resourceEndPoint = '/api/v1/users';
   }
 
   signUp(user: User): Observable<User> {
