@@ -12,7 +12,7 @@ export class NotificationsService extends BaseService<Notification> {
     this.resourceEndPoint = '/api/v1/notifications';
   }
   public getNotificationsByUserId(userId: string): Observable<Notification[]> {
-    return this.http.get<Notification[]>(`${this.resourcePath()}//?userId=${userId}`, this.httpOptions);
+    return this.http.get<Notification[]>(`${this.resourcePath()}?userId=${userId}`, this.httpOptions);
   }
   public updateNotification(notification: Notification): Observable<Notification> {
     return this.http.put<Notification>(`${this.resourcePath()}/${notification.id}`, notification, this.httpOptions);
