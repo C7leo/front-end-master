@@ -8,7 +8,7 @@ import {Meals} from "../model/meals.entity";
 export class PowerLiftingService extends BaseService<Meals> {
   constructor() {
     super();
-    this.resourceEndPoint = '/meals';
+    this.resourceEndPoint = '/api/v1/meals';
   }
 
   public getAllPowerLifting(): Observable<Meals[]> {

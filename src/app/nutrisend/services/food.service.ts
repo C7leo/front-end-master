@@ -9,7 +9,7 @@ import {Meals} from "../model/meals.entity";
 export class FoodService extends BaseService<Meals> {
   constructor() {
     super();
-    this.resourceEndPoint = '/meals';
+    this.resourceEndPoint = '/api/v1/meals';
   }
 
   public getAllFoodies(): Observable<Meals[]> {

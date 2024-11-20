@@ -8,7 +8,7 @@ import {Meals} from "../model/meals.entity";
 export class SwimmingService extends BaseService<Meals> {
   constructor() {
     super();
-    this.resourceEndPoint = '/meals';
+    this.resourceEndPoint = '/api/v1/meals';
   }
 
   public getAllSwimming(): Observable<Meals[]> {

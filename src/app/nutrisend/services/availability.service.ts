@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class AvailabilityService extends BaseService<Availability> {
   constructor() {
     super();
-    this.resourceEndPoint = '/availability';
+    this.resourceEndPoint = '/api/v1/availability';
   }
 
   public getAllAvailabilities(): Observable<Availability[]> {
