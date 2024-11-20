@@ -9,7 +9,7 @@ import { Notification } from '../model/notification.entity';
 export class NotificationsService extends BaseService<Notification> {
   constructor() {
     super();
-    this.resourceEndPoint = '/api/v1/notification';
+    this.resourceEndPoint = '/api/v1/notifications';
   }
   public getNotificationsByUserId(userId: string): Observable<Notification[]> {
     return this.http.get<Notification[]>(`${this.resourcePath()}//?userId=${userId}`, this.httpOptions);
